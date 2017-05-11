@@ -1,0 +1,24 @@
+# JDK Install
+  chmod +x jrockit-jdk1.6.0_45-R28.2.7-4.1.0-linux-x64.bin
+  ./jrockit-jdk1.6.0_45-R28.2.7-4.1.0-linux-x64.bin 
+  notice: 
+    securerandom.source=file:/dev/./urandom
+  JDK Environment variable setting:
+    export JAVA_HOME=/usr/share/jdk1.6.0_14 
+    export PATH=$JAVA_HOME/bin:$PATH 
+    export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
+
+# Weblogic Install
+  java -jar wls1036_generic.jar -mode=console
+  ........
+  install successful.
+
+# NodeManager Install
+  ./startNodeManager.sh
+  create a new file "nodeManager.domains" and append content:
+  AdminDomain Name -> Domain Path.
+  Notice:
+    disable SecurityListen(false)
+  restart NodeManager.
+  
+  It's OK.
